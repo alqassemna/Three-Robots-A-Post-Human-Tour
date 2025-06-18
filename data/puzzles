@@ -1,0 +1,14 @@
+window.puzzles = {
+    treadmill: {
+        required: "xbot",
+        solved: false
+    },
+    "control-panel": {
+        required: "g1145",
+        solved: false
+    },
+    "heavy-missile": {
+        required: "xbot",
+        solved: false
+    }
+};
