@@ -1,0 +1,48 @@
+/* Core and responsive styles, similar to your original, plus environment nav and puzzle/option buttons */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Share Tech Mono', 'Consolas', 'Monaco', monospace;
+    background: linear-gradient(135deg, #2c1810 0%, #1a1a1a 50%, #0d0d0d 100%);
+    color: #e0e0e0;
+    overflow: hidden;
+    height: 100vh;
+}
+.game-container {
+    width: 100vw; height: 100vh; position: relative; overflow: hidden;
+}
+.title-screen {
+    ... /* as before */
+}
+.env-nav {
+    position: absolute;
+    top: 10px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 12px; z-index: 1100;
+}
+.env-nav button {
+    background: #444; color: #ffd700;
+    border: 1px solid #ffd700; border-radius: 6px;
+    padding: 8px 18px; font-size: 1rem;
+    cursor: pointer; margin: 0 5px;
+    transition: background 0.2s, color 0.2s;
+}
+.env-nav button:hover, .env-nav button.active { background: #ffd700; color: #222; }
+.game-world { ... }
+.environment { ... }
+.robot, .robot.active, .robot-kvrc, .robot-xbot, .robot-11-45-g { ... }
+/* Artifacts, puzzles, cat, UI, dialogue, discoveries, instructions, etc. as before */
+.puzzle {
+    position: absolute;
+    width: 60px; height: 60px;
+    background: #333; border: 2px solid #00ff88; border-radius: 10px;
+    cursor: pointer; z-index: 150;
+}
+.puzzle.solved { filter: grayscale(1) brightness(0.4); border-color: #ffd700; }
+.dialogue-box { ... }
+#dialogueOptions { margin-top: 1em; }
+#dialogueOptions button {
+    background: #444; color: #ffd700; border: 1px solid #ffd700; border-radius: 4px;
+    padding: 4px 12px; margin: 0 5px 0 0; cursor: pointer;
+}
+#dialogueOptions button:hover { background: #ffd700; color: #222; }
+@media (max-width: 768px) { ... }
