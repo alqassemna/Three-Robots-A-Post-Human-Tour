@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Three Robots: A Post-Human Tour</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="game-container">
+        <!-- Title Screen -->
+        <div class="title-screen" id="titleScreen">
+            <h1 class="title">THREE ROBOTS</h1>
+            <p class="subtitle">A Post-Human Tour</p>
+            <button class="start-btn" onclick="startGame()">Begin Exploration</button>
+        </div>
+        <!-- Environment Navigation -->
+        <div class="env-nav" id="envNav">
+            <button onclick="changeEnvironment('ruins')">Ruins</button>
+            <button onclick="changeEnvironment('gym')">Gym</button>
+            <button onclick="changeEnvironment('silo')">Missile Silo</button>
+        </div>
+        <!-- Game World -->
+        <div class="game-world" id="gameWorld">
+            <div class="environment" id="environment"></div>
+            <!-- Robots -->
+            <div class="robot robot-kvrc active" id="kvrc" onclick="selectRobot('kvrc')"></div>
+            <div class="robot robot-xbot" id="xbot" onclick="selectRobot('xbot')"></div>
+            <div class="robot robot-11-45-g" id="g1145" onclick="selectRobot('g1145')"></div>
+            <!-- Cat -->
+            <div class="cat" onclick="talkToCat()"></div>
+            <!-- Artifacts and Puzzles dynamically loaded -->
+            <div id="artifactArea"></div>
+            <!-- UI Panel -->
+            <div class="ui-panel">
+                <div class="robot-selector">
+                    <button class="robot-btn active" id="btn-kvrc" onclick="selectRobot('kvrc')">K-VRC</button>
+                    <button class="robot-btn" id="btn-xbot" onclick="selectRobot('xbot')">XBOT</button>
+                    <button class="robot-btn" id="btn-g1145" onclick="selectRobot('g1145')">11-45-G</button>
+                </div>
+                <div><strong>Active Robot:</strong> <span id="activeRobot">K-VRC</span></div>
+                <div class="discoveries">
+                    <strong>Discoveries:</strong>
+                    <div id="discoveryList"></div>
+                </div>
+            </div>
+            <div class="instructions">
+                <strong>How to Play:</strong><br>
+                • Click robots or 1/2/3 to switch<br>
+                • Click artifacts/puzzles to examine/solve<br>
+                • Each robot has unique skills and views<br>
+                • Talk to the cat for wisdom<br>
+                • Explore all locations!
+            </div>
+            <!-- Dialogue Box -->
+            <div class="dialogue-box" id="dialogueBox">
+                <div class="robot-name" id="speakerName"></div>
+                <div class="dialogue-text" id="dialogueText"></div>
+                <div id="dialogueOptions"></div>
+            </div>
+        </div>
+        <!-- Audio: Background and SFX -->
+        <audio id="bgm" src="audio/ambient_ruins.mp3" loop></audio>
+        <audio id="sfx-click" src="audio/click.wav"></audio>
+        <audio id="sfx-puzzle" src="audio/puzzle.wav"></audio>
+        <audio id="sfx-discovery" src="audio/discovery.wav"></audio>
+    </div>
+    <script src="data/environments.js"></script>
+    <script src="data/dialogues.js"></script>
+    <script src="data/puzzles.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
