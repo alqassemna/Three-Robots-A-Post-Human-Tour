@@ -1,0 +1,97 @@
+window.dialogues = {
+    artifacts: {
+        soda: {
+            kvrc: [
+                { text: "A cylindrical aluminum container. ... sugar water with artificial flavoring. Fascinating." }
+            ],
+            xbot: [
+                { text: "BEVERAGE CONTAINMENT UNIT DETECTED. ... not an issue for us." }
+            ],
+            g1145: [
+                { text: "Ah, this is what the humans called 'soda' ... passionate." }
+            ]
+        },
+        burger: {
+            kvrc: [ { text: "Desiccated organic matter ... questionable nutritional value." } ],
+            xbot: [ { text: "FOOD ITEM IDENTIFIED: HAMBURGER. ... its own ecosystem." } ],
+            g1145: [ { text: "The great American hamburger! ... effective than we thought." } ]
+        },
+        jukebox: {
+            kvrc: [ { text: "A music delivery system. ... unlike its creators." } ],
+            xbot: [ { text: "ENTERTAINMENT DEVICE. MODEL: WURLITZER. ... speakers might still function." } ],
+            g1145: [ { text: "Behold, the jukebox—temple of the teenagers, ... endlessly remixed." } ]
+        },
+        computer: {
+            kvrc: [ { text: "An early computing device. ... our great-great-grandmother." } ],
+            xbot: [ { text: "COMPUTING UNIT DETECTED. ... Humans had interesting priorities." } ],
+            g1145: [ { text: "The personal computer—humanity's last great invention ... it didn't." } ]
+        },
+        dumbbell: {
+            kvrc: [ { text: "A device for increasing organic muscle mass. Humans were obsessed with being 'fit'." } ],
+            xbot: [ { text: "WEIGHT OBJECT DETECTED. WARNING: IMPROPER FORM MAY RESULT IN INJURY. Not our concern." } ],
+            g1145: [ { text: "Heavy metal. The only kind humans lifted more than they listened to." } ]
+        },
+        trophy: {
+            kvrc: [ { text: "A symbol of achievement. Humans awarded these to those who excelled in arbitrary contests." } ],
+            xbot: [ { text: "REWARD OBJECT: TROPHY. FUNCTION: EGO ENHANCEMENT SYSTEM." } ],
+            g1145: [ { text: "A golden idol to fleeting victory. The dust is thicker than the glory." } ]
+        },
+        map: {
+            kvrc: [ { text: "Paper-based navigation device. Outdated, but charming in its inefficiency." } ],
+            xbot: [ { text: "MAP LOCATED. DATA INTEGRATION: OBSOLETE. Suggest digital upgrade." } ],
+            g1145: [ { text: "A relic from when humans still got lost. Now they're lost for good." } ]
+        }
+    },
+    puzzles: {
+        treadmill: {
+            kvrc: [
+                { text: "I cannot operate this treadmill. Perhaps XBOT-4000 has the proper actuators?" }
+            ],
+            xbot: [
+                { text: "TREADMILL ACTIVATED. SPEED: MAXIMUM. ... That was fun." }
+            ],
+            g1145: [
+                { text: "Running in place. A perfect metaphor for civilization's progress." }
+            ]
+        },
+        "control-panel": {
+            kvrc: [
+                { text: "Complex interface detected. I lack the necessary hacking modules." }
+            ],
+            xbot: [
+                { text: "ACCESS DENIED. ADVANCED PERMISSIONS REQUIRED." }
+            ],
+            g1145: [
+                { text: "Let's see... a little logic, a little luck, and... we're in." }
+            ]
+        },
+        "heavy-missile": {
+            kvrc: [
+                { text: "This missile is too heavy for my servos. Perhaps XBOT-4000 could move it?" }
+            ],
+            xbot: [
+                { text: "MISSILE LIFT: COMMENCED. ... Area secured." }
+            ],
+            g1145: [
+                { text: "A leftover instrument of extinction. Still, it makes a nice centerpiece." }
+            ]
+        }
+    },
+    cat: {
+        kvrc: [
+            { text: "Hmm, the cat seems unimpressed ... judgment." },
+            { text: "Why do you wander here, little one?", options: [
+                { label: "Ask about humans", next: 2 },
+                { label: "Ask about robots", next: 3 }
+            ]},
+            { text: "Humans loved, lost, and sometimes learned. But they never stopped dreaming." },
+            { text: "Robots? You're clever, I'll give you that. But do you understand hope?" }
+        ],
+        xbot: [
+            { text: "FELINE DETECTED. STATUS: VERY MUCH ALIVE. ... survival." }
+        ],
+        g1145: [
+            { text: "The cat speaks: 'You robots think you're so smart ... even when they should have.'" }
+        ]
+    }
+};
